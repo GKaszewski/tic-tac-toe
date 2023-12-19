@@ -211,6 +211,7 @@ int main(int argc, char **argv) {
 
     while (SDL_TRUE) {
         while (game_state.player_turn == SDL_FALSE && game_state.game_over == SDL_FALSE) {
+            srand(SDL_GetTicks());
             int x = rand() % 3;
             int y = rand() % 3;
             Cell *cell = get_cell(&game_state.grid, x, y);
